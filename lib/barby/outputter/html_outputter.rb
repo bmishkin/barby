@@ -44,7 +44,7 @@ module Barby
                      line_to_elements_row(bools, options)
                    end.join("\n")
                  else
-                   line_to_elements_row(booleans, options)
+                   line_to_elements_row(booleans, options).join("\n")
                  end
       html = %|<#{parent_element} class="barby_code" #{parent_style_attribute(options)}>\n#{elements}\n</#{parent_element}>|
       options[:css] ? "<style>#{self.class.css}</style>\n#{html}" : html
